@@ -1,0 +1,44 @@
+#Palindrome string check using slice operator
+#
+
+def isPalindrome (s):
+    return s==s[::-1]
+    # boolean return
+    # Do not need to convert string to character array type in Python it seems
+    # CORRECTION: this is a list slice
+    # double colon used for jumping elements in multiple axes
+    # double colon is a slice operator
+    # SYNTAX: [start:end:step]
+
+    # The slice operator [n:m] means returns the part of the string starting with
+    # the character at index n and go up to, but not including the character at 
+    # index m.
+
+    # List slices are a slice that can work on strings
+
+    # Tuple Slices. First, tuple vs lists. immutable vs mutable. memory eficient vs
+    # less memory efficient
+
+    # in other words, start from array zero (contracted in this case, as in [0::-1])
+    # jump by negative one from zero.
+    # Looks like this means it's wrapping around the array?
+    # therefore, s==s[::-1] is comparing characters from ends and moving 
+    # towards middle.
+
+    # Once at middle, therre will either be 2 array coparison for size EVEN array
+    # or 1 array comparison for ODD size array (s=s) which will always be TRUE.
+    # very cool.
+
+    # This loops within the method until the character array is completed
+    # returning a set of boolean flags in the amount of the size of array
+    # if any are FALSE, return will be FALSE
+
+
+# Driver code
+s = "malayalam"
+ans = isPalindrome (s)
+
+if ans:
+    print ("Yes")
+else:
+    print("No")
