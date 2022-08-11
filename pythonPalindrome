@@ -18,6 +18,8 @@ def isPalindrome (s):
 
     # Tuple Slices. First, tuple vs lists. immutable vs mutable. memory eficient vs
     # less memory efficient
+    
+    # Also check the difference between list and dictionaries
 
     # in other words, start from array zero (contracted in this case, as in [0::-1])
     # jump by negative one from zero.
